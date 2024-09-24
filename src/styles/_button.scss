@@ -1,0 +1,20 @@
+.button {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    color: $white-text-color;
+    background-color: $hover-link-button-color;
+  
+    border: 0;
+    border-radius: 4px;
+  
+    transition: background-color 250ms $timing-function, box-shadow 250ms $timing-function;
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      background-color: $hover-button-color;
+      cursor: pointer;
+    }
+  }

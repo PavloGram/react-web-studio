@@ -1,0 +1,383 @@
+.page-header {
+  position: relative;
+
+  background-color: $white-text-color;
+  border-bottom: 1px solid #ececec;
+  padding: 15px 16px;
+  margin: 0 auto;
+
+  @media (min-width: 480px) {
+    width: 480px;
+  }
+  @media (min-width: 768px) {
+    width: 768px;
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+.page-header__container {
+  display: flex;
+  align-items: center;
+}
+
+.page-header__logo {
+  color: #000000;
+  @media screen and (min-width: 768px) {
+    margin-right: 87px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
+}
+
+.mobile-menu__open {
+  width: 40px;
+  height: 40px;
+
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  background-color: transparent;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile-menu__open {
+  &:hover {
+    cursor: pointer;
+  }
+
+  & {
+    &:hover,
+    &:focus,
+    &:active {
+      .mobile-menu__icon-menu {
+        fill: $hover-link-button-color;
+      }
+    }
+  }
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-menu {
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+
+  height: 100%;
+  background-color: $white-text-color;
+  z-index: 1;
+
+  padding: 48px 40px;
+
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile-menu__close {
+  width: 40px;
+  height: 40px;
+
+  position: fixed;
+  right: 9px;
+  top: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  background-color: transparent;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  & {
+    &:hover,
+    &:focus,
+    &:active {
+      .mobile-menu__icon-close {
+        fill: $hover-link-button-color;
+      }
+    }
+  }
+}
+
+.mobile-menu__set {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu__nav {
+  margin-bottom: auto;
+}
+
+.mobile-menu__nav-item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.mobile-menu__nav-link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: $static-form-text-color;
+
+  transition: color 250ms $timing-function;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $hover-link-button-color;
+  }
+}
+
+.mobile-menu__contact-item {
+  padding-bottom: 32px;
+}
+.mobile-menu__contact-tel {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: $hover-link-button-color;
+  text-decoration: none;
+}
+
+.mobile-menu__contact-mail {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: $basic-text-color;
+  text-decoration: none;
+}
+
+.mobile-menu__social-list {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+}
+
+.mobile-menu__social-item {
+  height: 22px;
+  &:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+
+  &:not(:first-child) {
+    padding-left: 10px;
+  }
+
+  &:not(:last-child) {
+    padding-right: 10px;
+  }
+}
+
+.mobile-menu__social-link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: $hover-link-button-color;
+  text-decoration: none;
+}
+
+.nav {
+  display: none;
+  list-style-type: none;
+  padding-left: 0;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.nav__link {
+  position: relative;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: $static-form-text-color;
+
+  transition: color 250ms $timing-function;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $hover-link-button-color;
+  }
+}
+
+.nav__studio--bottom-border {
+  &::after {
+    position: absolute;
+    @media screen and (max-width: 1199px) {
+      bottom: -32px;
+    }
+
+    bottom: -31px;
+
+    left: -1.5px;
+    content: "";
+    display: block;
+    width: 48px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $hover-link-button-color;
+
+    @media screen and (min-widtn: 1200px) {
+    }
+  }
+}
+
+.nav__portfolio--bottom-border {
+  &::after {
+    position: absolute;
+    bottom: -31px;
+    left: -3px;
+    content: "";
+    display: block;
+    width: 78px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $hover-link-button-color;
+  }
+}
+
+.contact {
+  display: none;
+  margin-left: auto;
+  list-style-type: none;
+  padding-left: 0;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+
+.contact__item {
+  display: flex;
+
+  @media screen and (min-width: 768px) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &:not(:last-child) {
+      margin-bottom: 0px;
+    }
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+}
+
+.contact__icon-smartphone {
+  width: 10px;
+  height: 14px;
+  margin-right: 8px;
+  fill: $basic-text-color;
+
+  @media screen and (min-width: 1200px) {
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+  }
+}
+
+.contact__icon-mail {
+  width: 14px;
+  height: 10px;
+  margin-right: 8px;
+  fill: $basic-text-color;
+
+  @media screen and (min-width: 1200px) {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+  }
+}
+
+.contact__link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  color: $basic-text-color;
+  transition: color 250ms $timing-function;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $hover-link-button-color;
+  }
+}
+
+.contact__link {
+  &:hover,
+  &:focus,
+  &:active {
+    .contact__icon-mail,
+    .contact__icon-smartphone {
+      fill: $hover-link-button-color;
+    }
+  }
+}
+
+.active-link{
+  color: $hover-link-button-color;
+}

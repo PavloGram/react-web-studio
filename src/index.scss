@@ -1,1 +1,10 @@
-@import '/src/_app.css';
+@import '/src/styles/breackpoints';
+@import '/src/styles/variables';
+@import '/src/styles/base';
+@import '/src/styles/hidden';
+@import '/src/styles/container';
+@import '/src/Components/Footer/footer';
+@import '/src/Components/Header/header';
+@import '/src/Components/Portfolio/portfolio';
+@import '/src/styles/button';
+@import '/src/styles/logo';
