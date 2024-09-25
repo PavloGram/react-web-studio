@@ -30,7 +30,7 @@ function Header() {
             className="mobile-menu__close js-close-menu"
             onClick={() => setShowMobMenu(false)}
           >
-            <CloseIcon />
+            <CloseIcon styles='mobile-menu__icon-close' />
           </button>
           <div className="mobile-menu__set">
             <nav className="mobile-menu__nav">

@@ -44,22 +44,22 @@ function Footer() {
             <ul className="footer-join__list">
               <li>
                 <a href="g" className="footer-join__link">
-                  <InstagarmIcon fill={"#ffffff"} />
+                  <InstagarmIcon styles='icon'/>
                 </a>
               </li>
               <li>
                 <a href="g" className="footer-join__link">
-                  <TwitterIcon fill={"#ffffff"} />
+                  <TwitterIcon styles='icon' />
                 </a>
               </li>
               <li>
                 <a href="g" className="footer-join__link">
-                  <FacebookIcon fill={"#ffffff"} />
+                  <FacebookIcon styles='icon' />
                 </a>
               </li>
               <li>
                 <a href="g" className="footer-join__link">
-                  <LinkedinIcon fill={"#ffffff"} />
+                  <LinkedinIcon styles='icon'/>
                 </a>
               </li>
             </ul>

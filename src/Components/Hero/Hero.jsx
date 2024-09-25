@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Hero() {
+export default function Hero({setIsActiveModal}) {
   return (
     <section className="section-hero">
         <div className="container">
@@ -8,7 +8,7 @@ export default function Hero() {
             Ефективні рішення для<br />
             вашого бізнесу
           </h1>
-          <button type="submit" className="button hero-button" data-modal-open>Замовити послугу</button>
+          <button type="submit" className="button hero-button" onClick={() => setIsActiveModal(true)}>Замовити послугу</button>
         </div>
       </section>
   )

@@ -1,13 +1,13 @@
 import React from "react";
 
-function CloseIcon() {
+function CloseIcon({styles, w = '40', h = '40' }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="30"
-      height="30"
+      width={w}
+      height={h}
       viewBox="0 0 40 40"
-      className="mobile-menu__icon-close"
+      className={styles}
       fill="#000000"
       
     >
