@@ -7,8 +7,8 @@ import { Link, NavLink, useMatch } from "react-router-dom";
 
 function Header() {
   const [showMobMenu, setShowMobMenu] = useState(false);
-  const path = useMatch("/")
-// console.log(path);
+  const path = useMatch("/");
+  // console.log(path);
 
   return (
     <header className="page-header">
@@ -37,7 +37,7 @@ function Header() {
               <ul className="mobile-menu__nav-list">
                 <li className="mobile-menu__nav-item">
                   <NavLink
-                    className={`mobile-menu__nav-link ${path && 'active-link'}`}
+                    className={`mobile-menu__nav-link ${({isActive}) => isActive && "active-link"}`}
                     to="/"
                     onClick={() => setShowMobMenu(false)}
                   >
@@ -46,7 +46,9 @@ function Header() {
                 </li>
                 <li className="mobile-menu__nav-item">
                   <NavLink
-                    className={`mobile-menu__nav-link ${!path && "active-link"}`}
+                    className={`mobile-menu__nav-link ${
+                      !path && "active-link"
+                    }`}
                     to="/portfolio"
                     onClick={() => setShowMobMenu(false)}
                   >
@@ -111,7 +113,9 @@ function Header() {
             <li className="nav__item">
               <NavLink
                 to="/"
-                className={`nav__link  ${path && "nav__studio--bottom-border active-link"}`}
+                className={`nav__link  ${
+                  path && "nav__studio--bottom-border active-link"
+                }`}
               >
                 Студія
               </NavLink>
@@ -119,7 +123,9 @@ function Header() {
             <li className="nav__item">
               <NavLink
                 to="/portfolio"
-                className={`nav__link ${ !path && "active-link nav__portfolio--bottom-border"}`}
+                className={`nav__link ${
+                  !path && "active-link nav__portfolio--bottom-border"
+                }`}
               >
                 Портфоліо
               </NavLink>

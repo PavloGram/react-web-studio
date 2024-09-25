@@ -1,0 +1,77 @@
+.section-hero {
+    background-color: #2f3032;
+    padding-top: 118px;
+    padding-bottom: 118px;
+    margin: 0 auto;
+  
+    @media screen and (max-width: 767px) {
+     
+  
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../../Images/hero-bg/hero-images480x400.jpg);
+      background-position: center;
+      background-size: cover;
+  
+      @media screen and (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../../Images/hero-bg/hero-images480x400@x2.jpg);
+      }
+    }
+  
+    @media screen and (min-width: 768px) {
+      
+  
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../../Images/hero-bg/hero-images768x400.jpg);
+      background-position: center;
+      background-size: cover;
+  
+      @media screen and (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../../Images/hero-bg/hero-images768x400@x2.jpg);
+      }
+    }
+  
+    @media screen and (min-width:1200px) {
+     
+      padding-top: 200px;
+      padding-bottom: 200px;
+      margin: 0 auto;
+  
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../../Images/hero-bg/hero-images1600x600.jpg);
+      background-position: center;
+      background-size: cover;
+  
+      @media screen and (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../../Images/hero-bg/hero-images1600x600@x2.jpg);
+      }
+    }
+  }
+  .hero__title {
+    display: block;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.61;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $white-text-color;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+  
+    @media screen and (min-width:1200px) {
+      font-size: 44px;
+      line-height: 1.36;
+    }
+  }
+  .hero-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 32px;
+  }
