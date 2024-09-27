@@ -1,9 +1,6 @@
 import React from "react";
-import InstagarmIcon from "../../Ui/InstagarmIcon";
-import TwitterIcon from "../../Ui/TwitterIcon";
-import FacebookIcon from "../../Ui/FacebookIcon";
-import LinkedinIcon from "../../Ui/LinkedinIcon";
 import SendIcon from "../../Ui/SendIcon";
+import { companySocialNetworks } from "../../lib/placeholder-data";
 
 function Footer() {
   return (
@@ -27,13 +24,16 @@ function Footer() {
                   </a>
                 </li>
                 <li className="address__item">
-                  <a href="mailto:info@devstudio.com" className="address__contact">
-                    info@devstudio.com
+                  <a
+                    href="mailto:hrampavlo@gmail.co"
+                    className="address__contact"
+                  >
+                    hrampavlo@gmail.co
                   </a>
                 </li>
                 <li className="address__item">
-                  <a href="tel:+380961111111" className="address__contact">
-                    +38 096 111 11 11
+                  <a href="tel:+380506624525" className="address__contact">
+                    +38 050 662 45 25
                   </a>
                 </li>
               </ul>
@@ -42,26 +42,15 @@ function Footer() {
           <div className="footer-join__set">
             <p className="footer-join__title">Приєднуйтесь</p>
             <ul className="footer-join__list">
-              <li>
-                <a href="g" className="footer-join__link">
-                  <InstagarmIcon styles='icon'/>
-                </a>
-              </li>
-              <li>
-                <a href="g" className="footer-join__link">
-                  <TwitterIcon styles='icon' />
-                </a>
-              </li>
-              <li>
-                <a href="g" className="footer-join__link">
-                  <FacebookIcon styles='icon' />
-                </a>
-              </li>
-              <li>
-                <a href="g" className="footer-join__link">
-                  <LinkedinIcon styles='icon'/>
-                </a>
-              </li>
+              {companySocialNetworks.map((e) => {
+                return (
+                  <li key={e.id}>
+                    <a href={e.link} className="footer-join__link">
+                      {e.icon}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
           <div className="footer-form">

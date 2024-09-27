@@ -7,8 +7,10 @@ import { Link, NavLink, useMatch } from "react-router-dom";
 
 function Header() {
   const [showMobMenu, setShowMobMenu] = useState(false);
-  const path = useMatch("/");
-  // console.log(path);
+
+  const urlHomePage = useMatch("/");
+  const urlPortfolioPage = useMatch("/portfolio");
+  const urlContactsPage = useMatch("/contacts");
 
   return (
     <header className="page-header">
@@ -30,14 +32,16 @@ function Header() {
             className="mobile-menu__close js-close-menu"
             onClick={() => setShowMobMenu(false)}
           >
-            <CloseIcon styles='mobile-menu__icon-close' />
+            <CloseIcon styles="mobile-menu__icon-close" />
           </button>
           <div className="mobile-menu__set">
             <nav className="mobile-menu__nav">
               <ul className="mobile-menu__nav-list">
                 <li className="mobile-menu__nav-item">
                   <NavLink
-                    className={`mobile-menu__nav-link ${({isActive}) => isActive && "active-link"}`}
+                    className={`mobile-menu__nav-link ${
+                      urlHomePage && "active-link"
+                    }`}
                     to="/"
                     onClick={() => setShowMobMenu(false)}
                   >
@@ -47,7 +51,7 @@ function Header() {
                 <li className="mobile-menu__nav-item">
                   <NavLink
                     className={`mobile-menu__nav-link ${
-                      !path && "active-link"
+                      urlPortfolioPage && "active-link"
                     }`}
                     to="/portfolio"
                     onClick={() => setShowMobMenu(false)}
@@ -56,9 +60,14 @@ function Header() {
                   </NavLink>
                 </li>
                 <li className="mobile-menu__nav-item">
-                  <a className="mobile-menu__nav-link" href="#j">
+                  <NavLink
+                    className={`mobile-menu__nav-link ${
+                      urlContactsPage && "active-link"
+                    }`}
+                    to="/contacts"
+                  >
                     Контакти
-                  </a>
+                  </NavLink>
                 </li>
               </ul>
             </nav>
@@ -67,17 +76,17 @@ function Header() {
                 <li className="mobile-menu__contact-item">
                   <a
                     className="mobile-menu__contact-tel"
-                    href="tel:+380961111111"
+                    href="tel:+380506624525"
                   >
-                    +380961111111
+                    +38 050 662 45 25
                   </a>
                 </li>
                 <li className="mobile-menu__contact-item">
                   <a
                     className="mobile-menu__contact-mail"
-                    href="mailto:info@devstudio.com"
+                    href="mailto:hrampavlo@gmail.co"
                   >
-                    info@devstudio.com
+                    hrampavlo@gmail.co
                   </a>
                 </li>
               </ul>
@@ -85,22 +94,22 @@ function Header() {
             <div>
               <ul className="mobile-menu__social-list">
                 <li className="mobile-menu__social-item">
-                  <a className="mobile-menu__social-link" href="#j">
+                  <a className="mobile-menu__social-link" href="instagram.com">
                     Instagram
                   </a>
                 </li>
                 <li className="mobile-menu__social-item">
-                  <a className="mobile-menu__social-link" href="#j">
+                  <a className="mobile-menu__social-link" href="twitter.com">
                     Twitter
                   </a>
                 </li>
                 <li className="mobile-menu__social-item">
-                  <a className="mobile-menu__social-link" href="#j">
+                  <a className="mobile-menu__social-link" href="facebook.com">
                     Facebook
                   </a>
                 </li>
                 <li className="mobile-menu__social-item">
-                  <a className="mobile-menu__social-link" href="j#">
+                  <a className="mobile-menu__social-link" href="linkedin.com">
                     Linkedln
                   </a>
                 </li>
@@ -114,7 +123,7 @@ function Header() {
               <NavLink
                 to="/"
                 className={`nav__link  ${
-                  path && "nav__studio--bottom-border active-link"
+                  urlHomePage && "nav__studio--bottom-border active-link"
                 }`}
               >
                 Студія
@@ -124,30 +133,36 @@ function Header() {
               <NavLink
                 to="/portfolio"
                 className={`nav__link ${
-                  !path && "active-link nav__portfolio--bottom-border"
+                  urlPortfolioPage &&
+                  "active-link nav__portfolio--bottom-border"
                 }`}
               >
                 Портфоліо
               </NavLink>
             </li>
             <li className="nav__item">
-              <a href="#h" className="nav__link">
+              <NavLink
+                to="/contacts"
+                className={`nav__link ${
+                  urlContactsPage && "active-link nav__contacts--bottom-border"
+                }`}
+              >
                 Контакти
-              </a>
+              </NavLink>
             </li>
           </ul>
         </nav>
         <ul className="contact">
           <li className="contact__item">
-            <a href="mailto:info@devstudio.com" className="contact__link">
+            <a href="mailto:hrampavlo@gmail.com" className="contact__link">
               <MailIcon />
-              info@devstudio.com
+              hrampavlo@gmail.co
             </a>
           </li>
           <li className="contact__item">
-            <a href="tel:+380961111111" className="contact__link">
+            <a href="tel:+380506624525" className="contact__link">
               <PhoneIcon />
-              +38 096 111 11 11
+              +38 050 662 45 25
             </a>
           </li>
         </ul>

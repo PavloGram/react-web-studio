@@ -119,25 +119,25 @@ const team = [
     socialNetworks: [
       {
         id: 1,
-        link: "/",
+        link: "instagram.com",
         name: "instagram",
         icon: <InstagarmIcon styles="team-icon" />,
       },
       {
         id: 2,
-        link: "/",
+        link: "twitter.com",
         name: "twitter",
         icon: <TwitterIcon styles="team-icon" />,
       },
       {
         id: 3,
-        link: "/",
+        link: "facebook.com",
         name: "facebook",
         icon: <FacebookIcon styles="team-icon" />,
       },
       {
         id: 4,
-        link: "/",
+        link: "linkedin.com",
         name: "linkedin",
         icon: <LinkedinIcon styles="team-icon" />,
       },
@@ -157,25 +157,25 @@ const team = [
     socialNetworks: [
       {
         id: 1,
-        link: "/",
+        link: "instagram.com",
         name: "instagram",
         icon: <InstagarmIcon styles="team-icon" />,
       },
       {
         id: 2,
-        link: "/",
+        link: "twitter.com",
         name: "twitter",
         icon: <TwitterIcon styles="team-icon" />,
       },
       {
         id: 3,
-        link: "/",
+        link: "facebook.com",
         name: "facebook",
         icon: <FacebookIcon styles="team-icon" />,
       },
       {
         id: 4,
-        link: "/",
+        link: "linkedin.com",
         name: "linkedin",
         icon: <LinkedinIcon styles="team-icon" />,
       },
@@ -195,25 +195,25 @@ const team = [
     socialNetworks: [
       {
         id: 1,
-        link: "/",
+        link: "instagram.com",
         name: "instagram",
         icon: <InstagarmIcon styles="team-icon" />,
       },
       {
         id: 2,
-        link: "/",
+        link: "twitter.com",
         name: "twitter",
         icon: <TwitterIcon styles="team-icon" />,
       },
       {
         id: 3,
-        link: "/",
+        link: "facebook.com",
         name: "facebook",
         icon: <FacebookIcon styles="team-icon" />,
       },
       {
         id: 4,
-        link: "/",
+        link: "linkedin.com",
         name: "linkedin",
         icon: <LinkedinIcon styles="team-icon" />,
       },
@@ -233,25 +233,25 @@ const team = [
     socialNetworks: [
       {
         id: 1,
-        link: "/",
+        link: "instagram.com",
         name: "instagram",
         icon: <InstagarmIcon styles="team-icon" />,
       },
       {
         id: 2,
-        link: "/",
+        link: "twitter.com",
         name: "twitter",
         icon: <TwitterIcon styles="team-icon" />,
       },
       {
         id: 3,
-        link: "/",
+        link: "facebook.com",
         name: "facebook",
         icon: <FacebookIcon styles="team-icon" />,
       },
       {
         id: 4,
-        link: "/",
+        link: "linkedin.com",
         name: "linkedin",
         icon: <LinkedinIcon styles="team-icon" />,
       },
@@ -292,4 +292,31 @@ const clients = [
   },
 ];
 
-export { benefits, myWorks, team, clients };
+const companySocialNetworks = [
+  {
+    id: 1,
+    link: "instagram.com",
+    name: "instagram",
+    icon: <InstagarmIcon styles="icon" />,
+  },
+  {
+    id: 2,
+    link: "twitter.com",
+    name: "twitter",
+    icon: <TwitterIcon styles="icon" />,
+  },
+  {
+    id: 3,
+    link: "facobook.com",
+    name: "facebook",
+    icon: <FacebookIcon styles="icon" />,
+  },
+  {
+    id: 4,
+    link: "linkedin.com",
+    name: "linkedin",
+    icon: <LinkedinIcon styles="icon" />,
+  },
+];
+
+export { benefits, myWorks, team, clients, companySocialNetworks };

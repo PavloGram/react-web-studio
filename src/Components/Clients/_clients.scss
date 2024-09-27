@@ -1,73 +1,80 @@
 .section-clients {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  
-    @media screen and (min-width:1200px) {
-      padding-top: 94px;
-      padding-bottom: 94px;
-    }
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
-  
-  .clients__title {
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 1.17;
-    text-align: center;
-    letter-spacing: 0.03em;
-    margin-bottom: 30px;
-    @media screen and (min-width:1200px) {
-        margin-bottom: 50px;
-        font-size: 36px;
-      }
+}
+
+.clients__title {
+  margin-bottom: 30px;
+
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+
+    font-size: 36px;
   }
-  
-  .clients__list {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-  
+}
+
+.clients__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+
+  list-style-type: none;
+}
+
+.clients__link {
+  width: 210px;
+  height: 92px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    width: 226px;
   }
-  
-  .clients__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 210px;
-    height: 92px;
-  
-    @media screen and (min-width:768px){
-      width: 226px;
-    }
-  
-    @media screen and (min-width:1200px) {
-      width: 170px;
-    }
-  
-    border: 1px solid $basic-icon-color;
+
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+  }
+
+  border: 1px solid $basic-icon-color;
+  border-radius: 4px;
+  cursor: pointer;
+
+  transition: border 250ms $timing-function,
+    border-radius 250ms $timing-function;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: 1px solid $hover-link-button-color;
     border-radius: 4px;
-    cursor: pointer;
-  
-    transition: border 250ms $timing-function, border-radius 250ms $timing-function;
-  
-    &:hover, &:focus, &:active {
-      border: 1px solid $hover-link-button-color ;
-      border-radius: 4px;
+  }
+}
+
+.clients__link {
+  &:hover,
+  &:focus,
+  &:active {
+    .clients__icon {
+      fill: $hover-link-button-color;
     }
-    
   }
-  
-  .clients__link {
-    &:hover, &:focus, &:active {
-      .clients__icon {
-        fill: $hover-link-button-color;
-      }
-    }
-    
-  }
-  
-  .clients__icon {
-    fill: $basic-icon-color;
-    transition: fill 250ms $timing-function;
-  }
+}
+
+.clients__icon {
+  fill: $basic-icon-color;
+  transition: fill 250ms $timing-function;
+}

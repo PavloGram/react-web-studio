@@ -1,10 +1,12 @@
-import React from 'react'
-import Portfolio from '../../Components/Portfolio/Portfolio'
+import React from "react";
+import Portfolio from "../../Components/Portfolio/Portfolio";
 
 function PortfolioPage() {
   return (
-    <Portfolio/>
-  )
+    <main>
+      <Portfolio />
+    </main>
+  );
 }
 
-export default PortfolioPage
+export default PortfolioPage;

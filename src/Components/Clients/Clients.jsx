@@ -16,7 +16,6 @@ function Clients() {
               </li>
             );
           })}
-        
         </ul>
       </div>
     </section>

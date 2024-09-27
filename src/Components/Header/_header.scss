@@ -1,10 +1,11 @@
 .page-header {
+  padding: 15px 16px;
+  margin: 0 auto;
+
   position: relative;
 
   background-color: $white-text-color;
   border-bottom: 1px solid #ececec;
-  padding: 15px 16px;
-  margin: 0 auto;
 
   @media (min-width: 480px) {
     width: 480px;
@@ -38,15 +39,16 @@
 }
 
 .mobile-menu__open {
-  width: 40px;
-  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   position: absolute;
   right: 10px;
   top: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  width: 40px;
+  height: 40px;
 
   border: none;
   background-color: transparent;
@@ -77,19 +79,20 @@
 }
 
 .mobile-menu {
-  opacity: 0;
-  pointer-events: none;
   position: fixed;
   right: 0;
   left: 0;
   top: 0;
-  width: 100%;
-
-  height: 100%;
-  background-color: $white-text-color;
   z-index: 1;
 
+  width: 100%;
+  height: 100%;
   padding: 48px 40px;
+
+  opacity: 0;
+  pointer-events: none;
+
+  background-color: $white-text-color;
 
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -101,15 +104,16 @@
 }
 
 .mobile-menu__close {
-  width: 40px;
-  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   position: fixed;
   right: 9px;
   top: 9px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  width: 40px;
+  height: 40px;
 
   border: none;
   background-color: transparent;
@@ -130,9 +134,10 @@
 }
 
 .mobile-menu__set {
-  height: 100%;
   display: flex;
   flex-direction: column;
+
+  height: 100%;
 }
 
 .mobile-menu__nav {
@@ -219,8 +224,10 @@
 
 .nav {
   display: none;
-  list-style-type: none;
+
   padding-left: 0;
+
+  list-style-type: none;
 
   @media screen and (min-width: 768px) {
     display: flex;
@@ -233,6 +240,7 @@
 
 .nav__link {
   position: relative;
+
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
@@ -255,14 +263,15 @@
     @media screen and (max-width: 1199px) {
       bottom: -32px;
     }
+    display: block;
 
     bottom: -31px;
-
     left: -1.5px;
     content: "";
-    display: block;
+
     width: 48px;
     height: 4px;
+
     border-radius: 2px;
     background-color: $hover-link-button-color;
 
@@ -273,13 +282,32 @@
 
 .nav__portfolio--bottom-border {
   &::after {
+    display: block;
+
     position: absolute;
     bottom: -31px;
     left: -3px;
     content: "";
-    display: block;
+
     width: 78px;
     height: 4px;
+
+    border-radius: 2px;
+    background-color: $hover-link-button-color;
+  }
+}
+
+.nav__contacts--bottom-border {
+  &::after {
+    display: block;
+    width: 64px;
+    height: 4px;
+
+    position: absolute;
+    bottom: -31px;
+    left: 1px;
+    content: "";
+
     border-radius: 2px;
     background-color: $hover-link-button-color;
   }
@@ -287,9 +315,11 @@
 
 .contact {
   display: none;
+
   margin-left: auto;
-  list-style-type: none;
   padding-left: 0;
+
+  list-style-type: none;
 
   @media screen and (min-width: 768px) {
     display: block;
@@ -347,6 +377,7 @@
 .contact__link {
   display: inline-flex;
   align-items: center;
+
   text-decoration: none;
   font-weight: 500;
   font-size: 12px;
@@ -378,6 +409,6 @@
   }
 }
 
-.active-link{
+.active-link {
   color: $hover-link-button-color;
 }

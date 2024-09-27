@@ -6,15 +6,19 @@ import FormPhoneIcon from "../../Ui/Form-icon/FormPhoneIcon";
 import FormMailIcon from "../../Ui/Form-icon/FormMailIcon";
 import FormCheckIcon from "../../Ui/Form-icon/FormCheckIcon";
 
-function Modal({isActive, setIsActiveModal}) {
-  
-    
+function Modal({ isActive, setIsActiveModal }) {
   return (
-    <div className={`backdrop ${!isActive && 'is-hidden'} `} onClick={() => setIsActiveModal(false)}>
-      <div className="modal" onClick={e => e.stopPropagation()}>
-        <button className="modal__close-button" type="button" onClick={() => setIsActiveModal(false)}>
-          
-          <FormCloseIcon/>
+    <div
+      className={`backdrop ${!isActive && "is-hidden"} `}
+      onClick={() => setIsActiveModal(false)}
+    >
+      <div className="modal" onClick={(e) => e.stopPropagation()}>
+        <button
+          className="modal__close-button"
+          type="button"
+          onClick={() => setIsActiveModal(false)}
+        >
+          <FormCloseIcon />
         </button>
         <p className="modal__text">Залиште свої данні, ми вам передзвонимо</p>
         <form>
@@ -28,8 +32,7 @@ function Modal({isActive, setIsActiveModal}) {
               type="text"
               name="person-name"
             />
-            <FormPersonIcon/>
-       
+            <FormPersonIcon />
           </div>
 
           <label className="modal__tel-label" htmlFor="person-tel">
@@ -42,7 +45,7 @@ function Modal({isActive, setIsActiveModal}) {
               type="tel"
               name="person-tel"
             />
-           <FormPhoneIcon/>
+            <FormPhoneIcon />
           </div>
 
           <label className="modal__mail-label" htmlFor="person-mail">
@@ -55,7 +58,7 @@ function Modal({isActive, setIsActiveModal}) {
               type="email"
               name="person-mail"
             />
-            <FormMailIcon/>
+            <FormMailIcon />
           </div>
 
           <label className="modal__comment-label" htmlFor="person-comment">
@@ -77,14 +80,14 @@ function Modal({isActive, setIsActiveModal}) {
                 className="modal__checkbox-input"
               />
               <span className="modal__checkbox-text"></span>
-              Погоджуюсь з розсилкою та приймаю 
+              Погоджуюсь з розсилкою та приймаю
               <a href="#s" className="modal__checkbox-link">
-                   Умови договору
+                Умови договору
               </a>
               <svg className="modal__checkbox-icon" width="16" height="16">
                 <use href="./images/icon.svg#icon-icon-check-5"></use>
               </svg>
-              <FormCheckIcon/>
+              <FormCheckIcon />
             </label>
           </div>
           <button type="submit" className="button modal__form-button">
