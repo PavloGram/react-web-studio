@@ -25,10 +25,10 @@ function Footer() {
                 </li>
                 <li className="address__item">
                   <a
-                    href="mailto:hrampavlo@gmail.co"
+                    href="mailto:hrampavlo@gmail.com"
                     className="address__contact"
                   >
-                    hrampavlo@gmail.co
+                    hrampavlo@gmail.com
                   </a>
                 </li>
                 <li className="address__item">

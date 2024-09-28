@@ -4,6 +4,7 @@ import CloseIcon from "../../Ui/CloseIcon";
 import PhoneIcon from "../../Ui/PhoneIcon";
 import MailIcon from "../../Ui/MailIcon";
 import { Link, NavLink, useMatch } from "react-router-dom";
+import { companySocialNetworks } from "../../lib/placeholder-data";
 
 function Header() {
   const [showMobMenu, setShowMobMenu] = useState(false);
@@ -85,35 +86,24 @@ function Header() {
                 <li className="mobile-menu__contact-item">
                   <a
                     className="mobile-menu__contact-mail"
-                    href="mailto:hrampavlo@gmail.co"
+                    href="mailto:hrampavlo@gmail.com"
                   >
-                    hrampavlo@gmail.co
+                    hrampavlo@gmail.com
                   </a>
                 </li>
               </ul>
             </div>
             <div>
               <ul className="mobile-menu__social-list">
-                <li className="mobile-menu__social-item">
-                  <a className="mobile-menu__social-link" href="instagram.com">
-                    Instagram
-                  </a>
-                </li>
-                <li className="mobile-menu__social-item">
-                  <a className="mobile-menu__social-link" href="twitter.com">
-                    Twitter
-                  </a>
-                </li>
-                <li className="mobile-menu__social-item">
-                  <a className="mobile-menu__social-link" href="facebook.com">
-                    Facebook
-                  </a>
-                </li>
-                <li className="mobile-menu__social-item">
-                  <a className="mobile-menu__social-link" href="linkedin.com">
-                    Linkedln
-                  </a>
-                </li>
+                {companySocialNetworks.map((e) => {
+                  return (
+                    <li className="mobile-menu__social-item" key={e.id}>
+                      <a className="mobile-menu__social-link" href={e.link}>
+                        {e.name}
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>
@@ -157,7 +147,7 @@ function Header() {
           <li className="contact__item">
             <a href="mailto:hrampavlo@gmail.com" className="contact__link">
               <MailIcon />
-              hrampavlo@gmail.co
+              hrampavlo@gmail.com
             </a>
           </li>
           <li className="contact__item">
