@@ -64,6 +64,7 @@ function Header() {
                     className={`mobile-menu__nav-link ${
                       urlContactsPage && "active-link"
                     }`}
+                    onClick={() => setShowMobMenu(false)}
                     to="/contacts"
                   >
                     Контакти

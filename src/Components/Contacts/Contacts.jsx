@@ -2,10 +2,10 @@ import React from "react";
 
 function Contacts() {
   return (
-    <section>
-      <h2 className="contacts-title">
+    <section className="contacts-wrap">
+      <p className="contacts-title">
         Вибачте, але ця сторінка знаходиться в розробці.{" "}
-      </h2>
+      </p>
     </section>
   );
 }
